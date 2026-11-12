@@ -102,4 +102,677 @@
   <div id="page-auditorium" class="page-view page-visible auditorium-bg flex flex-col justify-between">
     <!-- Top Header -->
     <header class="max-w-6xl w-full mx-auto px-6 py-5 flex items-center justify-between">
-      <div class="flex items
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-cyan-500/20 border border-cyan-400 flex items-center justify-center text-cyan-300 font-cyber font-bold shadow-[0_0_15px_rgba(34,211,238,0.35)]">
+          S
+        </div>
+        <span class="font-cyber text-xl font-bold tracking-wider text-cyan-300">SpeakUp AI</span>
+      </div>
+      <button onclick="switchPage('studio')" class="px-5 py-2 rounded-full bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400 text-cyan-200 text-sm font-semibold transition shadow-[0_0_20px_rgba(34,211,238,0.3)] cursor-pointer">
+        Launch Practice Studio →
+      </button>
+    </header>
+
+    <!-- Hero + High-Resolution Illustrated Auditorium -->
+    <main class="max-w-5xl w-full mx-auto px-6 pt-2 pb-8 text-center flex flex-col items-center">
+      <span class="px-4 py-1 rounded-full text-xs font-semibold tracking-widest uppercase bg-amber-500/15 border border-amber-400/40 text-amber-200 mb-3">
+        Real-Time AI Public Speaking &amp; Viva Coach
+      </span>
+      <h1 class="font-cyber text-3xl sm:text-5xl font-black tracking-tight text-white drop-shadow-lg">
+        Own the Stage. <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-400 to-purple-400">Speak Fearlessly.</span>
+      </h1>
+      <p class="mt-2.5 max-w-2xl text-slate-300 text-sm sm:text-base">
+        Step into the spotlight in front of a 100-seat auditorium. Click the glowing microphone on stage to enter the Cosmic Practice Studio.
+      </p>
+
+      <!-- Crisp High-Definition SVG Auditorium Scene -->
+      <div class="relative w-full max-w-4xl mt-6 rounded-2xl overflow-hidden border border-amber-500/35 shadow-[0_20px_70px_rgba(0,0,0,0.85)] bg-[#0b0604]">
+        <svg viewBox="0 0 1200 540" class="w-full h-auto block select-none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Warm Woody Wall Gradient -->
+            <linearGradient id="woodWall" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2c170b"/>
+              <stop offset="55%" stop-color="#1a0d06"/>
+              <stop offset="100%" stop-color="#090503"/>
+            </linearGradient>
+            <!-- Acoustic Wooden Slat Pattern -->
+            <pattern id="woodSlats" width="24" height="100" patternUnits="userSpaceOnUse">
+              <rect width="18" height="100" fill="#231208"/>
+              <rect x="18" width="6" height="100" fill="#110804"/>
+            </pattern>
+            <!-- Volumetric Overhead Spotlight -->
+            <radialGradient id="stageSpotlight" cx="50%" cy="22%" r="48%">
+              <stop offset="0%" stop-color="#ffdfa0" stop-opacity="0.42"/>
+              <stop offset="40%" stop-color="#d97706" stop-opacity="0.16"/>
+              <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+            </radialGradient>
+            <!-- Stage Floor Sheen -->
+            <linearGradient id="stageWood" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#452310"/>
+              <stop offset="40%" stop-color="#291409"/>
+              <stop offset="100%" stop-color="#120804"/>
+            </linearGradient>
+            <!-- Plush Comfy Theater Chair Backrest -->
+            <linearGradient id="plushChair" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#4a151b"/>
+              <stop offset="100%" stop-color="#1f070a"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Background Acoustic Woody Walls -->
+          <rect width="1200" height="540" fill="url(#woodWall)"/>
+          <rect width="1200" height="310" fill="url(#woodSlats)" opacity="0.55"/>
+
+          <!-- Architectural Side Wall Panels (3D Perspective) -->
+          <polygon points="0,0 210,70 210,300 0,360" fill="#170b05" opacity="0.85"/>
+          <polygon points="1200,0 990,70 990,300 1200,360" fill="#170b05" opacity="0.85"/>
+          <!-- Warm Wall Sconce Lights -->
+          <ellipse cx="105" cy="145" rx="38" ry="65" fill="#f59e0b" opacity="0.16"/>
+          <ellipse cx="1095" cy="145" rx="38" ry="65" fill="#f59e0b" opacity="0.16"/>
+
+          <!-- Stage Platform -->
+          <polygon points="170,285 1030,285 1130,335 70,335" fill="url(#stageWood)"/>
+          <rect x="70" y="335" width="1060" height="14" fill="#180b05"/>
+          <line x1="170" y1="285" x2="1030" y2="285" stroke="#92400e" stroke-width="2" opacity="0.6"/>
+
+          <!-- Overhead Spotlight Cone -->
+          <polygon points="520,0 680,0 850,335 350,335" fill="url(#stageSpotlight)"/>
+          <ellipse cx="600" cy="308" rx="190" ry="22" fill="#fbbf24" opacity="0.14"/>
+
+          <!-- Black Faceless Speaker on Stage -->
+          <g transform="translate(555, 145)">
+            <!-- Head (Faceless Black Silhouette) -->
+            <circle cx="45" cy="28" r="19" fill="#050505"/>
+            <!-- Torso & Tailored Suit Shoulders -->
+            <path d="M12,162 L16,74 C16,56 30,52 45,52 C60,52 74,56 74,74 L78,162 Z" fill="#050505"/>
+            <!-- Raised Arm Holding Mic -->
+            <path d="M70,68 L96,86 L108,66" stroke="#050505" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </g>
+
+          <!-- Interactive Glowing Floating Microphone Trigger -->
+          <g class="mic-trigger" onclick="switchPage('studio')">
+            <!-- Outer Pulsing Halo Ring -->
+            <circle cx="666" cy="196" r="26" fill="rgba(34,211,238,0.12)" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4 3" class="mic-glow"/>
+            <!-- Mic Capsule & Handle -->
+            <g class="mic-glow" transform="translate(658, 179)">
+              <rect x="3" y="0" width="10" height="17" rx="5" fill="#083344" stroke="#22d3ee" stroke-width="2"/>
+              <line x1="3" y1="8" x2="13" y2="8" stroke="#22d3ee" stroke-width="1.2"/>
+              <path d="M1,13 A7,7 0 0,0 15,13" fill="none" stroke="#22d3ee" stroke-width="1.8"/>
+              <line x1="8" y1="20" x2="8" y2="31" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+            <!-- Subtle Floating Prompt Label -->
+            <rect x="572" y="136" width="188" height="22" rx="11" fill="rgba(6, 18, 32, 0.88)" stroke="#22d3ee" stroke-width="1"/>
+            <text x="666" y="151" text-anchor="middle" fill="#67e8f9" font-family="Orbitron, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1">
+              CLICK MIC TO ENTER
+            </text>
+          </g>
+
+          <!-- 100 Faceless Black-Clad Audience Silhouettes Seated in Plush Theater Chairs -->
+          <g id="auditorium-audience"></g>
+
+          <!-- Bottom Vignette Shadow -->
+          <rect y="480" width="1200" height="60" fill="url(#woodWall)" opacity="0.65"/>
+        </svg>
+      </div>
+
+      <!-- Team & Capstone Credits -->
+      <section class="w-full mt-9 text-left">
+        <h2 class="font-cyber text-center text-base sm:text-lg font-bold text-cyan-300 tracking-wider uppercase mb-4">
+          Capstone Project Team &amp; Contributions
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Manu -->
+          <div class="cyber-card rounded-xl p-5">
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="font-cyber text-lg font-bold text-white">Manu</h3>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40">Project Head</span>
+            </div>
+            <p class="text-xs text-cyan-200/80 font-semibold mb-2">Lead Architect &amp; UI Designer</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Conceived the SpeakUp AI core concept; designed and built the full web application, custom interface, and icons; handled end-to-end deployment, code maintenance, and critical bug fixes.
+            </p>
+          </div>
+
+          <!-- Mayank -->
+          <div class="cyber-card rounded-xl p-5">
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="font-cyber text-lg font-bold text-white">Mayank</h3>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/40">Pitch &amp; Strategy</span>
+            </div>
+            <p class="text-xs text-purple-200/80 font-semibold mb-2">Product Strategy &amp; QA Lead</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Authored and designed the entire pitch deck independently; introduced the bilingual (English/Hinglish) framework and practice drill modes; led comprehensive QA testing.
+            </p>
+          </div>
+
+          <!-- Prateek -->
+          <div class="cyber-card rounded-xl p-5">
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="font-cyber text-lg font-bold text-white">Prateek</h3>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/40">AI &amp; Systems QA</span>
+            </div>
+            <p class="text-xs text-pink-200/80 font-semibold mb-2">Voice Pipeline &amp; Debugging</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Engineered voice feedback integration and conversational coaching workflows; tested runtime loops and resolved state synchronization bugs across the site.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-4 text-xs text-slate-400 border-t border-white/5">
+      SpeakUp AI • Interactive Speech Coaching System
+    </footer>
+  </div>
+
+  <!-- ==================== PAGE 2: COSMIC PRACTICE STUDIO ==================== -->
+  <div id="page-studio" class="page-view page-hidden cosmic-bg">
+    <div id="starfield" class="fixed inset-0 pointer-events-none overflow-hidden"></div>
+
+    <!-- Studio Header -->
+    <header class="relative z-10 max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3 border-b border-cyan-500/20">
+      <button onclick="switchPage('auditorium')" class="px-4 py-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-cyan-400/40 text-cyan-300 text-sm font-medium transition cursor-pointer">
+        ← Back to Auditorium
+      </button>
+      <div class="flex items-center gap-2">
+        <span class="font-cyber text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-fuchsia-400">
+          SpeakUp AI Studio
+        </span>
+      </div>
+      <button onclick="runSampleDemo()" class="px-4 py-2 rounded-lg bg-fuchsia-600/25 hover:bg-fuchsia-600/40 border border-fuchsia-400/50 text-fuchsia-200 text-xs sm:text-sm font-semibold transition cursor-pointer">
+        ▶ Run Sample Demo
+      </button>
+    </header>
+
+    <!-- Studio Workspace -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Left Column: Controls, Drills & Mic (7 cols) -->
+      <div class="lg:col-span-7 space-y-5">
+        <!-- Mode & Environment Bar -->
+        <div class="cyber-card rounded-xl p-4 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <label class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">Stage Scenario</label>
+            <select id="scenario-select" class="bg-slate-950 border border-cyan-500/40 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none">
+              <option>Capstone Viva / Classroom</option>
+              <option>Keynote Auditorium (100+ Crowd)</option>
+              <option>Technical Job Interview</option>
+              <option>Impromptu Open Mic</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1">Practice Language Mode</label>
+            <div class="inline-flex rounded-lg bg-slate-950 p-1 border border-cyan-500/30">
+              <button id="btn-en" onclick="setLanguage('en-IN')" class="px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500 text-slate-950 transition cursor-pointer">
+                English
+              </button>
+              <button id="btn-hi" onclick="setLanguage('hi-IN')" class="px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition cursor-pointer">
+                Hinglish
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practice Drills -->
+        <div class="cyber-card rounded-xl p-4">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-cyber uppercase tracking-wider text-cyan-300">Practice Drills (Click to Load Teleprompter)</span>
+            <button onclick="selectDrill(0)" class="text-xs text-slate-400 hover:text-cyan-300 underline cursor-pointer">Clear Script (Free Speak)</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button onclick="selectDrill(1)" class="text-left p-3 rounded-lg bg-slate-900/90 hover:bg-cyan-950/40 border border-cyan-500/30 transition cursor-pointer">
+              <div class="text-xs font-bold text-cyan-300 mb-1">Drill 1 • English Viva Pitch</div>
+              <p class="text-xs text-slate-300 line-clamp-2">"Good morning professors. Today my team and I are presenting SpeakUp AI..."</p>
+            </button>
+            <button onclick="selectDrill(2)" class="text-left p-3 rounded-lg bg-slate-900/90 hover:bg-purple-950/40 border border-purple-500/30 transition cursor-pointer">
+              <div class="text-xs font-bold text-purple-300 mb-1">Drill 2 • Hinglish Stage Intro</div>
+              <p class="text-xs text-slate-300 line-clamp-2">"Namaste, aaj main apni team ke project SpeakUp AI ko present kar raha hoon..."</p>
+            </button>
+          </div>
+
+          <!-- Active Teleprompter Box -->
+          <div class="mt-4 p-4 rounded-lg bg-slate-950/90 border border-cyan-400/30">
+            <div class="text-[11px] uppercase tracking-wider text-cyan-400 mb-1">Read-Aloud Target Script</div>
+            <p id="teleprompter-text" class="text-sm sm:text-base text-slate-100 leading-relaxed">
+              Good morning professors. Today my team and I are presenting SpeakUp AI, an intelligent speech coaching platform designed to eliminate stage fear and verbal clutter using real-time voice feedback.
+            </p>
+          </div>
+        </div>
+
+        <!-- Live Microphone & Audio Visualizer -->
+        <div class="cyber-card rounded-xl p-6 text-center">
+          <button id="mic-btn" onclick="toggleRecording()" class="mx-auto w-20 h-20 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.5)] transition transform hover:scale-105 cursor-pointer">
+            <svg id="mic-icon" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <rect x="9" y="2" width="6" height="11" rx="3"/>
+              <path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <p id="mic-status" class="mt-3 text-sm font-semibold text-cyan-200">Tap Microphone to Start Live Speech Capture</p>
+          <p id="timer-display" class="text-xs text-slate-400 mt-0.5">00:00</p>
+
+          <!-- Animated Soundwave Bars -->
+          <div id="visualizer" class="mt-4 h-10 flex items-center justify-center gap-1.5">
+            <span class="w-1.5 h-3 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-5 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-4 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-7 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-3 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-6 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-4 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+            <span class="w-1.5 h-5 bg-cyan-400/40 rounded-full transition-all duration-100"></span>
+          </div>
+
+          <!-- Live Transcript Output -->
+          <div class="mt-4 text-left p-4 rounded-lg bg-slate-950/90 border border-white/10 min-h-[90px]">
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 mb-1">Live Word Catching (Fillers Highlighted)</div>
+            <div id="transcript-box" class="text-sm text-slate-200 leading-relaxed">
+              Your spoken words will appear here in real time...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 5-Tier Rank Card, Metrics & Smart Coach (5 cols) -->
+      <div class="lg:col-span-5 space-y-5">
+        <!-- 5-Tier Color-Coded Grade Banner -->
+        <div id="rank-card" class="rounded-xl p-5 border border-slate-700 bg-slate-900/80 transition-all duration-300">
+          <div class="flex items-center justify-between">
+            <span id="rank-badge" class="text-xs font-cyber uppercase tracking-wider px-2.5 py-1 rounded bg-slate-800 text-slate-300">
+              Awaiting Speech
+            </span>
+            <span id="score-big" class="font-cyber text-3xl font-black text-white">--/100</span>
+          </div>
+          <p id="rank-message" class="mt-3 text-sm font-semibold text-slate-200">
+            Speak into the mic or click "Run Sample Demo" to evaluate your delivery.
+          </p>
+        </div>
+
+        <!-- WPM & Filler Metrics -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="cyber-card rounded-xl p-4 text-center">
+            <div class="text-xs text-slate-400 uppercase">Pace (Words/Min)</div>
+            <div id="wpm-val" class="font-cyber text-2xl font-bold text-cyan-300 mt-1">0</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Ideal: 110–150 WPM</div>
+          </div>
+          <div class="cyber-card rounded-xl p-4 text-center">
+            <div class="text-xs text-slate-400 uppercase">Filler Words</div>
+            <div id="filler-val" class="font-cyber text-2xl font-bold text-rose-400 mt-1">0</div>
+            <div id="filler-detail" class="text-[11px] text-slate-400 mt-0.5">Clean delivery</div>
+          </div>
+        </div>
+
+        <!-- Built-in Browser Voice Coach & Actionable Tips -->
+        <div class="cyber-card rounded-xl p-5">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-cyber text-xs uppercase tracking-wider text-cyan-300">AI Speech Coach &amp; Tips</span>
+            <button onclick="speakFeedback()" class="px-3 py-1 rounded-full bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400 text-cyan-200 text-xs font-semibold transition cursor-pointer">
+              🔊 Listen to Coach
+            </button>
+          </div>
+          <ul id="tips-list" class="space-y-2 text-xs text-slate-200 list-disc pl-4">
+            <li>Select a Drill or Free Speak mode and record for at least 10 seconds.</li>
+            <li>Pause silently for half a second instead of saying "um", "like", or "basically".</li>
+            <li>Keep a steady conversational pace between 110 and 150 words per minute.</li>
+          </ul>
+        </div>
+
+        <!-- Quick Ask Speech Coach -->
+        <div class="cyber-card rounded-xl p-5">
+          <div class="font-cyber text-xs uppercase tracking-wider text-purple-300 mb-2.5">Quick Coaching Q&amp;A</div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <button onclick="askCoach('fear')" class="text-[11px] px-2.5 py-1 rounded-full bg-purple-500/20 hover:bg-purple-500/35 border border-purple-400/40 text-purple-200 cursor-pointer">Beat Stage Fear</button>
+            <button onclick="askCoach('fillers')" class="text-[11px] px-2.5 py-1 rounded-full bg-purple-500/20 hover:bg-purple-500/35 border border-purple-400/40 text-purple-200 cursor-pointer">Stop Filler Words</button>
+            <button onclick="askCoach('viva')" class="text-[11px] px-2.5 py-1 rounded-full bg-purple-500/20 hover:bg-purple-500/35 border border-purple-400/40 text-purple-200 cursor-pointer">Viva Delivery Tips</button>
+          </div>
+          <p id="coach-answer" class="text-xs text-slate-300 bg-slate-950/80 p-3 rounded-lg border border-white/10 leading-relaxed">
+            Click any topic above for instant public speaking advice.
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // 1. Render 100 Layered Black-Clad Faceless Audience Silhouettes in Plush Theater Seats
+    const audienceGroup = document.getElementById('auditorium-audience');
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const rows = 5;
+    const cols = 20;
+
+    for (let r = 0; r < rows; r++) {
+      const yBase = 362 + r * 36;
+      const scale = 0.82 + r * 0.065;
+      const rowWidth = 960 + r * 48;
+      const startX = (1200 - rowWidth) / 2;
+      const stepX = rowWidth / (cols - 1);
+
+      for (let c = 0; c < cols; c++) {
+        // Stagger odd rows for realistic theater sightlines
+        const stagger = (r % 2 === 1) ? stepX * 0.35 : 0;
+        const cx = startX + c * stepX + stagger;
+        if (cx < 35 || cx > 1165) continue;
+
+        const person = document.createElementNS(svgNS, 'g');
+        person.setAttribute('transform', `translate(${cx}, ${yBase}) scale(${scale})`);
+
+        // Plush Comfy Chair Backrest
+        const chair = document.createElementNS(svgNS, 'rect');
+        chair.setAttribute('x', '-17');
+        chair.setAttribute('y', '-8');
+        chair.setAttribute('width', '34');
+        chair.setAttribute('height', '34');
+        chair.setAttribute('rx', '7');
+        chair.setAttribute('fill', 'url(#plushChair)');
+        chair.setAttribute('stroke', '#2a090d');
+        chair.setAttribute('stroke-width', '1');
+
+        // Black-Clad Shoulders & Torso
+        const shoulders = document.createElementNS(svgNS, 'path');
+        shoulders.setAttribute('d', 'M-19,28 C-19,12 -10,8 0,8 C10,8 19,12 19,28 Z');
+        shoulders.setAttribute('fill', '#040404');
+
+        // Faceless Black Head Silhouette
+        const head = document.createElementNS(svgNS, 'circle');
+        head.setAttribute('cx', '0');
+        head.setAttribute('cy', '-2');
+        head.setAttribute('r', '8.5');
+        head.setAttribute('fill', '#040404');
+        head.setAttribute('stroke', '#171717');
+        head.setAttribute('stroke-width', '0.8');
+
+        person.appendChild(chair);
+        person.appendChild(shoulders);
+        person.appendChild(head);
+        audienceGroup.appendChild(person);
+      }
+    }
+
+    // Populate Cosmic Twinkling Stars
+    const starfield = document.getElementById('starfield');
+    for (let i = 0; i < 75; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 1;
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.setProperty('--dur', (Math.random() * 3 + 2) + 's');
+      starfield.appendChild(s);
+    }
+
+    // 2. Smooth Page Transitions
+    function switchPage(target) {
+      const aud = document.getElementById('page-auditorium');
+      const stu = document.getElementById('page-studio');
+      if (target === 'studio') {
+        aud.classList.replace('page-visible', 'page-hidden');
+        stu.classList.replace('page-hidden', 'page-visible');
+      } else {
+        stu.classList.replace('page-visible', 'page-hidden');
+        aud.classList.replace('page-hidden', 'page-visible');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 3. Language & Drills
+    let currentLang = 'en-IN';
+    const drills = {
+      0: 'Free Speak Mode: Speak naturally on any topic for 10–20 seconds.',
+      1: 'Good morning professors. Today my team and I are presenting SpeakUp AI, an intelligent speech coaching platform designed to eliminate stage fear and verbal clutter using real-time voice feedback.',
+      2: 'Namaste, aaj main apni team ke project SpeakUp AI ko present kar raha hoon. Yeh ek aisa AI tool hai jo public speaking aur viva presentations ke dauran hesitation aur filler words ko khatam karne mein madad karta hai.'
+    };
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const btnEn = document.getElementById('btn-en');
+      const btnHi = document.getElementById('btn-hi');
+      if (lang === 'en-IN') {
+        btnEn.className = 'px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500 text-slate-950 transition cursor-pointer';
+        btnHi.className = 'px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition cursor-pointer';
+      } else {
+        btnHi.className = 'px-3 py-1 rounded-md text-xs font-semibold bg-purple-500 text-white transition cursor-pointer';
+        btnEn.className = 'px-3 py-1 rounded-md text-xs font-semibold text-slate-300 hover:text-white transition cursor-pointer';
+      }
+    }
+
+    function selectDrill(id) {
+      document.getElementById('teleprompter-text').textContent = drills[id];
+      if (id === 2) setLanguage('hi-IN');
+      if (id === 1) setLanguage('en-IN');
+    }
+
+    // 4. Web Speech API + Web Audio Visualizer
+    let recognition = null;
+    let isRecording = false;
+    let finalTranscript = '';
+    let startTime = 0;
+    let timerInterval = null;
+    let audioCtx = null;
+    let analyser = null;
+    let animFrame = null;
+    let lastCoachText = 'Record a speech session first so I can analyze your fluency and pacing.';
+
+    const fillersEn = ['um', 'uh', 'like', 'basically', 'you know', 'actually', 'literally'];
+    const fillersHi = ['um', 'uh', 'like', 'actually', 'matlab', 'yaar', 'मतलब', 'यार', 'लाइक'];
+
+    function toggleRecording() {
+      if (isRecording) {
+        stopRecording();
+      } else {
+        startRecording();
+      }
+    }
+
+    async function startRecording() {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) {
+        alert('Speech Recognition is not supported in this browser. Please use Chrome or Edge, or click "Run Sample Demo".');
+        return;
+      }
+
+      finalTranscript = '';
+      startTime = Date.now();
+      isRecording = true;
+
+      const micBtn = document.getElementById('mic-btn');
+      micBtn.classList.add('animate-pulse', 'from-rose-500', 'to-red-600');
+      document.getElementById('mic-status').textContent = 'Listening... Speak clearly into your mic';
+      document.getElementById('transcript-box').textContent = 'Listening...';
+
+      timerInterval = setInterval(() => {
+        const secs = Math.floor((Date.now() - startTime) / 1000);
+        const mins = String(Math.floor(secs / 60)).padStart(2, '0');
+        const rem = String(secs % 60).padStart(2, '0');
+        document.getElementById('timer-display').textContent = `${mins}:${rem}`;
+      }, 500);
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const source = audioCtx.createMediaStreamSource(stream);
+        analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 32;
+        source.connect(analyser);
+        animateBars();
+      } catch (e) {}
+
+      recognition = new SpeechRec();
+      recognition.lang = currentLang;
+      recognition.continuous = true;
+      recognition.interimResults = true;
+
+      recognition.onresult = (event) => {
+        let interim = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript + ' ';
+          } else {
+            interim += event.results[i][0].transcript;
+          }
+        }
+        renderHighlightedTranscript((finalTranscript + interim).trim());
+      };
+
+      recognition.onerror = () => stopRecording();
+      recognition.start();
+    }
+
+    function animateBars() {
+      if (!isRecording || !analyser) return;
+      const data = new Uint8Array(analyser.frequencyBinCount);
+      analyser.getByteFrequencyData(data);
+      const bars = document.querySelectorAll('#visualizer span');
+      bars.forEach((bar, i) => {
+        const val = data[i + 1] || 20;
+        const h = Math.max(8, Math.min(40, (val / 255) * 42));
+        bar.style.height = h + 'px';
+        bar.style.backgroundColor = '#22d3ee';
+      });
+      animFrame = requestAnimationFrame(animateBars);
+    }
+
+    function stopRecording() {
+      isRecording = false;
+      clearInterval(timerInterval);
+      if (recognition) recognition.stop();
+      if (animFrame) cancelAnimationFrame(animFrame);
+      if (audioCtx) audioCtx.close();
+
+      const micBtn = document.getElementById('mic-btn');
+      micBtn.classList.remove('animate-pulse', 'from-rose-500', 'to-red-600');
+      document.getElementById('mic-status').textContent = 'Tap Microphone to Start Live Speech Capture';
+
+      const durationSec = Math.max(3, (Date.now() - startTime) / 1000);
+      evaluateSpeech(finalTranscript.trim(), durationSec);
+    }
+
+    // 5. Highlight Fillers & 5-Tier Color-Coded Evaluation
+    function renderHighlightedTranscript(text) {
+      if (!text) return;
+      const list = currentLang === 'hi-IN' ? fillersHi : fillersEn;
+      let html = text;
+      list.forEach(word => {
+        const regex = new RegExp(`\\b(${word})\\b`, 'gi');
+        html = html.replace(regex, '<span class="px-1.5 py-0.5 rounded bg-rose-500/30 border border-rose-400 text-rose-200 font-semibold">$1</span>');
+      });
+      document.getElementById('transcript-box').innerHTML = html;
+    }
+
+    function evaluateSpeech(text, durationSec) {
+      renderHighlightedTranscript(text || '(No speech detected)');
+      const words = text ? text.split(/\s+/).filter(Boolean) : [];
+      const wordCount = words.length;
+      const wpm = wordCount === 0 ? 0 : Math.round((wordCount / durationSec) * 60);
+
+      const list = currentLang === 'hi-IN' ? fillersHi : fillersEn;
+      let fillerCount = 0;
+      const caught = [];
+      words.forEach(w => {
+        const clean = w.toLowerCase().replace(/[.,!?]/g, '');
+        if (list.includes(clean)) {
+          fillerCount++;
+          if (!caught.includes(clean)) caught.push(clean);
+        }
+      });
+
+      let score = 0;
+      if (wordCount > 0) {
+        score = 88;
+        if (wpm < 95) score -= 22;
+        else if (wpm > 165) score -= 15;
+        else if (wpm >= 110 && wpm <= 150) score += 8;
+
+        score -= fillerCount * 9;
+        if (wordCount < 6) score -= 35;
+        score = Math.max(5, Math.min(100, score));
+      }
+
+      document.getElementById('wpm-val').textContent = wpm;
+      document.getElementById('filler-val').textContent = fillerCount;
+      document.getElementById('filler-detail').textContent = caught.length ? `Caught: ${caught.join(', ')}` : 'Zero clutter words!';
+      document.getElementById('score-big').textContent = `${score}/100`;
+
+      const card = document.getElementById('rank-card');
+      const badge = document.getElementById('rank-badge');
+      const msg = document.getElementById('rank-message');
+
+      let rankTitle = '', rankMsg = '', borderCol = '', bgCol = '', textCol = '';
+
+      if (score < 20) {
+        rankTitle = 'Rank 5 • Needs Practice';
+        rankMsg = 'U need so much practice stick with us and u will improve';
+        borderCol = '#EF4444'; bgCol = 'rgba(239, 68, 68, 0.16)'; textCol = '#FCA5A5';
+      } else if (score < 40) {
+        rankTitle = 'Rank 4 • Developing';
+        rankMsg = 'not bad and not good either practice more';
+        borderCol = '#F97316'; bgCol = 'rgba(249, 115, 22, 0.16)'; textCol = '#FDBA74';
+      } else if (score < 60) {
+        rankTitle = 'Rank 3 • Progressing';
+        rankMsg = 'good try improving until u r succeed';
+        borderCol = '#EAB308'; bgCol = 'rgba(234, 179, 8, 0.16)'; textCol = '#FDE047';
+      } else if (score < 80) {
+        rankTitle = 'Rank 2 • Above Average';
+        rankMsg = 'You are already better than 60% people in the whole world just a few more practice sessions and you will become great speaker';
+        borderCol = '#84CC16'; bgCol = 'rgba(132, 204, 22, 0.16)'; textCol = '#BEF264';
+      } else {
+        rankTitle = 'Rank 1 • Master Speaker';
+        rankMsg = score >= 95
+          ? 'u are a god gifted speaker'
+          : 'That was fabulous but not perfect keep it up';
+        borderCol = '#4ADE80'; bgCol = 'rgba(74, 222, 128, 0.18)'; textCol = '#86EFAC';
+      }
+
+      card.style.borderColor = borderCol;
+      card.style.backgroundColor = bgCol;
+      badge.textContent = rankTitle;
+      badge.style.color = textCol;
+      msg.textContent = rankMsg;
+
+      const tips = [];
+      if (wordCount === 0) {
+        tips.push('No voice was captured—check browser mic permissions or click "Run Sample Demo".');
+      } else {
+        if (wpm < 105) tips.push(`Your pace was ${wpm} WPM (slightly slow). Project your voice with slightly quicker energy.`);
+        else if (wpm > 160) tips.push(`You spoke fast at ${wpm} WPM. Take a half-second breath after every full sentence.`);
+        else tips.push(`Great pacing at ${wpm} WPM—right inside the executive sweet spot (110–150 WPM).`);
+
+        if (fillerCount > 0) tips.push(`Replace your ${fillerCount} filler word(s) (${caught.join(', ')}) with a confident 1-second silent pause.`);
+        else tips.push('Zero filler words detected—your sentences sounded crisp and authoritative.');
+
+        tips.push(`Overall Grade: ${rankMsg}`);
+      }
+
+      document.getElementById('tips-list').innerHTML = tips.map(t => `<li>${t}</li>`).join('');
+      lastCoachText = `You scored ${score} out of 100 at ${wpm} words per minute. ${rankMsg}. ${tips[0]}`;
+    }
+
+    // 6. Native Browser SpeechSynthesis
+    function speakFeedback() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(lastCoachText);
+      utter.rate = 1.02;
+      utter.pitch = 1.0;
+      window.speechSynthesis.speak(utter);
+    }
+
+    // 7. Sample Demo Mode
+    function runSampleDemo() {
+      const sample = "Good morning professors. Today my team and I are presenting SpeakUp AI, an intelligent speech coaching platform designed to eliminate stage fear and basically verbal clutter using real-time voice feedback.";
+      document.getElementById('timer-display').textContent = '00:14';
+      evaluateSpeech(sample, 14);
+    }
+
+    // 8. Instant Q&A Coach
+    function askCoach(topic) {
+      const answers = {
+        fear: 'Anchor your eyes on a friendly spot just above the back row, take one 4-second inhale before your first word, and pause for 2 full seconds before starting.',
+        fillers: 'Record yourself for 30 seconds and train yourself to close your mouth whenever you feel an "um" or "basically" coming—silence sounds confident to an audience.',
+        viva: 'Lead with the problem in 1 sentence, show the live demo immediately, and keep your pace around 125 WPM while emphasizing key metrics.'
+      };
+      document.getElementById('coach-answer').textContent = answers[topic];
+    }
+  </script>
+</body>
+</html>
